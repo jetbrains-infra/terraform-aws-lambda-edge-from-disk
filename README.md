@@ -3,7 +3,7 @@ Terraform module to deploy Lambda function that you can attach to CloudFront dis
 
 Features: 
 * IAM Role with right to write into CloudWatch Logs
-* Correct `us-east-1` region
+* Correct target `us-east-1` region
 
 ## Usage
 
