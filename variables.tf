@@ -12,8 +12,14 @@ variable "timeout" {
   default = "10"
 }
 
+variable "runtime" {
+  default = "nodejs10.x"
+  description = "Lambda runtime, see https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html for more details"
+}
+
 locals {
   name           = var.name
+  runtime        = var.runtime
   handler_name   = var.handler_name
   lambda_archive = var.archive_path
   memory_limit   = var.memory_limit
