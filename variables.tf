@@ -1,9 +1,9 @@
 variable "archive_path" {}
 variable "name" {
-  description = "Function name."
+  description = "Function name"
 }
 variable "handler_name" {
-  description = "Handler name prefix. E.g. 'method' will be turnd into 'method.handler' as lambda function handler."
+  description = "Handler name prefix. E.g. 'method' will be turned into 'method.handler' as lambda function handler"
 }
 variable "memory_limit" {
   default = "128"
