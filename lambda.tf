@@ -3,7 +3,7 @@ resource "aws_lambda_function" "lambda" {
   function_name    = local.name
   role             = aws_iam_role.lambda.arn
   handler          = local.handler_name
-  source_code_hash = filebase64sha256(local.lambda_archive)
+  source_code_hash = local.lambda_archive_source_code_hash
   runtime          = local.runtime
   publish          = "true"
   provider         = aws.us

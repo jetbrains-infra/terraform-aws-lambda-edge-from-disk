@@ -1,4 +1,5 @@
 variable "archive_path" {}
+variable "archive_path_source_code_hash" {}
 variable "name" {
   description = "Function name"
 }
@@ -22,6 +23,7 @@ locals {
   runtime        = var.runtime
   handler_name   = var.handler_name
   lambda_archive = var.archive_path
+  lambda_archive_source_code_hash = var.archive_path_source_code_hash
   memory_limit   = var.memory_limit
   timeout        = var.timeout
 }
