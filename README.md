@@ -9,22 +9,24 @@ Features:
 
 ```hcl
 module "function" {
-  source             = "github.com/jetbrains-infra/terraform-aws-lambda-edge-from-disk?ref=vX.X.X" // see https://github.com/jetbrains-infra/terraform-aws-lambda-edge-from-disk/releases
-  name               = "redirector"
-  handler_name       = "redirector.handle"
-  archive_path       = data.archive_file.redirector.output_path
+  source                        = "github.com/jetbrains-infra/terraform-aws-lambda-edge-from-disk?ref=vX.X.X" // see https://github.com/jetbrains-infra/terraform-aws-lambda-edge-from-disk/releases
+  name                          = "redirector"
+  handler_name                  = "redirector.handle"
+  archive_path                  = data.archive_file.redirector.output_path
+  archive_path_source_code_hash = data.archive_file.redirector.output_base64sha256
 }
 ```
 
 All params:
 ```hcl
 module "function" {
-  source             = "github.com/jetbrains-infra/terraform-aws-lambda-edge-from-disk?ref=vX.X.X" // see https://github.com/jetbrains-infra/terraform-aws-lambda-edge-from-disk/releases
-  name               = "redirector"
-  handler_name       = "redirector.handle"
-  archive_path       = data.archive_file.redirector.output_path
-  memory_limit       = "128"
-  timeout            = "10"
+  source                        = "github.com/jetbrains-infra/terraform-aws-lambda-edge-from-disk?ref=vX.X.X" // see https://github.com/jetbrains-infra/terraform-aws-lambda-edge-from-disk/releases
+  name                          = "redirector"
+  handler_name                  = "redirector.handle"
+  archive_path                  = data.archive_file.redirector.output_path
+  archive_path_source_code_hash = data.archive_file.redirector.output_base64sha256
+  memory_limit                  = "128"
+  timeout                       = "10"
 }
 ```
 
